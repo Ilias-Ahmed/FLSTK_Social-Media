@@ -43,8 +43,6 @@ app.use(
         "default-src": ["'self'"],
         "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
         "media-src": ["'self'", "https://res.cloudinary.com"],
-        "script-src": ["'self'", "'unsafe-inline'"],
-        "style-src": ["'self'", "'unsafe-inline'"],
       },
     },
   })
