@@ -1,62 +1,51 @@
-# 📱 MiPedia
-
 <div align="center">
 
-<img src="https://th.bing.com/th/id/OIG2.38PC_8LMcHFC8ZhGhiEX?w=173&h=173&c=6&r=0&o=5&dpr=1.5&pid=ImgGn" width="100px" alt="Project Logo">
+<img src="https://res.cloudinary.com/nestmedia/image/upload/v1748578375/NodeNest_Logo_jflbec.png" width="100px" alt="Project Logo">
 
 _Connect, Share, Interact - Your Social World_
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/mipedia)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/NodeNest)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Contributors](https://img.shields.io/badge/contributors-welcome-orange)](https://github.com/yourusername/mipedia/graphs/contributors)
+[![Contributors](https://img.shields.io/badge/contributors-welcome-orange)](https://github.com/yourusername/NodeNest/graphs/contributors)
 [![Made with MERN](https://img.shields.io/badge/made%20with-MERN-61dafb)](https://www.mongodb.com/mern-stack)
-
-[Live Demo](#) | [Report Bug](https://github.com/yourusername/mipedia/issues) | [Request Feature](https://github.com/yourusername/mipedia/issues)
 
 </div>
 
 ## Table of Contents
 
-- [📱 MiPedia](#-mipedia)
-  - [🌟 Overview](#-overview)
-    - [✨ Key Features](#-key-features)
-  - [🚀 Tech Stack](#-tech-stack)
-    - [Frontend](#frontend)
-    - [Backend](#backend)
-    - [Infrastructure](#infrastructure)
-  - [🛠️ Installation](#️-installation)
-    - [Prerequisites](#prerequisites)
-    - [Step-by-Step Setup](#step-by-step-setup)
-  - [🎉 Ready to Use!](#-ready-to-use)
-  - [Usage](#usage)
-  - [Screenshots](#screenshots)
-  - [API Reference Chart](#api-reference-chart)
-  - [Authentication Endpoints](#authentication-endpoints)
-  - [User Endpoints](#user-endpoints)
-  - [Post Endpoints](#post-endpoints)
-  - [Bookmark Endpoints](#bookmark-endpoints)
-  - [Search Endpoint](#search-endpoint)
-  - [Protected Routes](#protected-routes)
-  - [File Upload](#file-upload)
-  - [📂 Project Structure](#-project-structure)
-  - [Code Structure](#code-structure)
-    - [Project Layout](#project-layout)
-    - [Additional Notes](#additional-notes)
-  - [File Structure](#file-structure)
-  - [Contributing](#contributing)
-    - [How to Contribute](#how-to-contribute)
-    - [Coding Standards](#coding-standards)
-  - [📜 License](#-license)
-  - [👥 Team](#-team)
-  - [📬 Contact](#-contact)
-  - [🙏 Acknowledgments](#-acknowledgments)
-  - [📬Getting Help:](#getting-help)
-  - [Live Demo](#live-demo)
-  - [Related Projects](#related-projects)
+- [Table of Contents](#table-of-contents)
+- [🌟 Overview](#-overview)
+- [✨ Features](#-features)
+- [🚀 Tech Stack](#-tech-stack)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [Infrastructure](#infrastructure)
+- [🛠️ Installation](#️-installation)
+  - [Prerequisites](#prerequisites)
+  - [Step-by-Step Setup](#step-by-step-setup)
+- [🎉 Ready to Use!](#-ready-to-use)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [File Upload](#file-upload)
+- [📂 Project Structure](#-project-structure)
+- [Code Structure](#code-structure)
+  - [Project Layout](#project-layout)
+  - [Additional Notes](#additional-notes)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+  - [How to Contribute](#how-to-contribute)
+  - [Coding Standards](#coding-standards)
+- [📜 License](#-license)
+- [👥 Team](#-team)
+- [📬 Contact](#-contact)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📬Getting Help:](#getting-help)
+- [Live Demo](#live-demo)
+- [Related Projects](#related-projects)
 
 ## 🌟 Overview
 
-MiPedia is a modern social media platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It offers a seamless experience for connecting with friends, sharing moments, and engaging in real-time conversations.
+NodeNest is a modern social media platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It offers a seamless experience for connecting with friends, sharing moments, and engaging in real-time conversations.
 
 ## ✨ Features
 
@@ -126,8 +115,8 @@ MiPedia is a modern social media platform built with the MERN stack (MongoDB, Ex
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/mipedia.git
-   cd mipedia
+   git clone https://github.com/Ilias-Ahmed/FLSTK_Social-Media.git
+   cd NodeNest
    ```
 
 2. **Environment Setup**
@@ -145,7 +134,7 @@ MiPedia is a modern social media platform built with the MERN stack (MongoDB, Ex
 
    ```env
    PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/mipedia
+   MONGODB_URI=mongodb://localhost:27017/NodeNest
    JWT_SECRET=your_jwt_secret
    CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
@@ -194,57 +183,6 @@ _Home page view of the social media app_
 ![Real-Time Chat](https://link-to-chat-screenshot.png)
 _Real-time messaging between users_
 
-## API Reference Chart
-
-This will provides comprehensive information about all available endpoints, their functionality, and usage.
-
-## Authentication Endpoints
-
-| Method | Endpoint             | Description       | Request Body                    | Response          |
-| ------ | -------------------- | ----------------- | ------------------------------- | ----------------- |
-| POST   | `/api/auth/register` | Register new user | `{ userName, email, password }` | `{ user, token }` |
-| POST   | `/api/auth/login`    | Login user        | `{ email, password }`           | `{ user, token }` |
-| POST   | `/api/auth/logout`   | Logout user       | -                               | `{ message }`     |
-
-## User Endpoints
-
-| Method | Endpoint                | Description              | Request Body          | Response      |
-| ------ | ----------------------- | ------------------------ | --------------------- | ------------- |
-| GET    | `/api/users/profile`    | Get current user profile | -                     | `{ user }`    |
-| GET    | `/api/users/:id`        | Get user by ID           | -                     | `{ user }`    |
-| PUT    | `/api/users/profile`    | Update profile           | `{ bio, profilePic }` | `{ user }`    |
-| DELETE | `/api/users/delete`     | Delete account           | -                     | `{ message }` |
-| GET    | `/api/users/suggested`  | Get suggested users      | -                     | `{ users }`   |
-| POST   | `/api/users/:id/follow` | Follow/Unfollow user     | -                     | `{ message }` |
-
-## Post Endpoints
-
-| Method | Endpoint                             | Description      | Request Body         | Response      |
-| ------ | ------------------------------------ | ---------------- | -------------------- | ------------- |
-| GET    | `/api/posts`                         | Get feed posts   | -                    | `{ posts }`   |
-| GET    | `/api/posts/:id`                     | Get post by ID   | -                    | `{ post }`    |
-| POST   | `/api/posts`                         | Create post      | `{ caption, image }` | `{ post }`    |
-| DELETE | `/api/posts/:id`                     | Delete post      | -                    | `{ message }` |
-| PUT    | `/api/posts/:id`                     | Update post      | `{ caption }`        | `{ post }`    |
-| POST   | `/api/posts/:id/like`                | Like/Unlike post | -                    | `{ message }` |
-| POST   | `/api/posts/:id/comments`            | Add comment      | `{ text }`           | `{ comment }` |
-| DELETE | `/api/posts/:id/comments/:commentId` | Delete comment   | -                    | `{ message }` |
-
-## Bookmark Endpoints
-
-| Method | Endpoint                  | Description              | Request Body | Response      |
-| ------ | ------------------------- | ------------------------ | ------------ | ------------- |
-| POST   | `/api/posts/:id/bookmark` | Bookmark/Unbookmark post | -            | `{ message }` |
-| GET    | `/api/users/bookmarks`    | Get bookmarked posts     | -            | `{ posts }`   |
-
-## Search Endpoint
-
-| Method | Endpoint            | Description  | Query Params      | Response    |
-| ------ | ------------------- | ------------ | ----------------- | ----------- |
-| GET    | `/api/users/search` | Search users | `q` (search term) | `{ users }` |
-
-## Protected Routes
-
 Important: All endpoints except `/api/auth/register` and `/api/auth/login` require authentication.
 
 ## File Upload
@@ -256,7 +194,7 @@ Important: All endpoints except `/api/auth/register` and `/api/auth/login` requi
 ## 📂 Project Structure
 
 ```
-mipedia/
+NodeNest/
 ├── client/                 # Frontend application
 │   ├── src/
 │   │   ├── components/    # Reusable components
@@ -352,7 +290,7 @@ Have questions? Reach out!
 
 - Email: [m.iliasahmed143@gmail.com](mailto:m.iliasahmed143@gmail.com)
 - LinkedIn: [Ilias Ahmed](https://www.linkedin.com/in/ilias-ahmed9613/)
-- Project Link: [https://github.com/yourusername/mipedia](https://github.com/yourusername/mipedia)
+- Project Link: [https://github.com/yourusername/NodeNest](https://github.com/yourusername/NodeNest)
 
 ## 🙏 Acknowledgments
 
@@ -389,7 +327,4 @@ Here are some related projects:
 <div align="center">
 
 Made with ❤️ by [Ilias Ahmed](https://github.com/yourusername)
-
-[![Contributors](https://contrib.rocks/image?repo=username/repository)](https://github.com/username/repository/graphs/contributors)
-
 </div>

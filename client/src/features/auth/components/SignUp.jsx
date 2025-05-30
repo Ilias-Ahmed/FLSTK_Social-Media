@@ -47,7 +47,7 @@ const SignUp = () => {
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            Sign Up for Mipedia
+            Sign Up for NodeNest
           </CardTitle>
         </CardHeader>
         <CardContent>

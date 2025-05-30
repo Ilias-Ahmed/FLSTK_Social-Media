@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -28,6 +27,7 @@ import { useNavigate } from "react-router-dom";
 import { updateSettings, deleteAccount } from "../slices/userSlice";
 import { logoutUser } from "@/features/auth/slices/authSlice";
 import { SettingsIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function SettingsDialogComponent() {
   const dispatch = useDispatch();

@@ -54,7 +54,7 @@ const Login = () => {
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            Log in to Mipedia
+            Log in to NodeNest
           </CardTitle>
         </CardHeader>
         <CardContent>
