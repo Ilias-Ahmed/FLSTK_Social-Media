@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "type": "module",
-  "scripts": {
-    "start": "node --env-file=.env --watch index.js",  },
+"scripts": {
+    "start": "node --env-file=.env --watch index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
