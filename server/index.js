@@ -1,5 +1,7 @@
 import express from "express";
 import http from "http";
+import path from "path";
+import { fileURLToPath } from "url";
 import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -10,6 +12,10 @@ import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
 import { initSocket } from "./utils/socket.js";
+
+// For __dirname in ES6
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const server = http.createServer(app);
@@ -40,14 +46,17 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+// Serve static files from React
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
 
-// 404 route
-app.use((req, res) => {
-  res.status(404).json({ message: "Route not found" });
+// Handle all unknown routes with React (this should be after API routes)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 // Error handling middleware
