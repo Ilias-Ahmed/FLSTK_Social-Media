@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 
 const BASE_URL = `${
-  import.meta.env.VITE_API_URL || "https://nodenest-m94k.onrender.com"
+  import.meta.env.VITE_API_URL || "https://nodenest-n4lx.onrender.com"
 }/api`;
 const TOKEN_KEY = import.meta.env.VITE_TOKEN_KEY || "token";
 
