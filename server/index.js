@@ -36,19 +36,14 @@ app.use(
 
 // 👇 Updated helmet CSP to allow Cloudinary images
 app.use(
-  helmet({
-    contentSecurityPolicy: {
-      useDefaults: true,
-      directives: {
-        "default-src": ["'self'"],
-        "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
-        "media-src": ["'self'", "https://res.cloudinary.com"],
-        "script-src": ["'self'", "'unsafe-inline'"],
-        "style-src": ["'self'", "'unsafe-inline'"],
-      },
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "blob:", "https://res.cloudinary.com"],
     },
   })
 );
+
 
 app.use(morgan("dev"));
 app.use(express.json());
