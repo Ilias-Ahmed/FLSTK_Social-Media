@@ -33,7 +33,23 @@ app.use(
     credentials: true,
   })
 );
-app.use(helmet());
+
+// 👇 Updated helmet CSP to allow Cloudinary images
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "default-src": ["'self'"],
+        "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
+        "media-src": ["'self'", "https://res.cloudinary.com"],
+        "script-src": ["'self'", "'unsafe-inline'"],
+        "style-src": ["'self'", "'unsafe-inline'"],
+      },
+    },
+  })
+);
+
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -77,6 +93,5 @@ server.listen(PORT, () => {
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Error: ${err.message}`);
-  // Close server & exit process
   server.close(() => process.exit(1));
 });
