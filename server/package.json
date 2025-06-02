@@ -2,10 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
-"scripts": {
-    "start": "node --env-file=.env --watch index.js"
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --env-file=.env --watch index.js"
   },
   "author": "",
   "license": "ISC",
